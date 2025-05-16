@@ -1,0 +1,350 @@
+<!-- Orarul clasei 7E -->
+
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Orar 7E</title>
+        <meta
+            name="description"
+            content="Orarul clasei 7E din școala gimnazială nr. 27, în anul școlar 2024-2025" />
+        <link rel="shortcut icon" href="img/calendar-icon.png" type="image/png" />
+        <link rel="stylesheet" href="style.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    </head>
+    <body>
+        <div class="biggest-container">
+            <div class="header">
+                <button id="switchTheme" class="btn" onclick="changeTheme()" title="Schimbă tema">
+                    <i id="themeIcon" class="fa-regular fa-sun"></i>
+                </button>
+
+                <h1 class="title">Orar 7E</h1>
+
+                <div class="color-picker" title="Alege o culoare de accent">
+                    <button id="colorPickerButton" class="btn">
+                        <i class="fa-solid fa-paintbrush"></i>
+                    </button>
+                    <input type="color" id="accentColorPicker" value="#6196ff" />
+                </div>
+            </div>
+
+            <div class="big-container">
+                <div class="timetable-wrapper">
+                    <table class="timetable">
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <th id="Monday">Luni</th>
+                                <th id="Tuesday">Marți</th>
+                                <th id="Wednesday">Miercuri</th>
+                                <th id="Thursday">Joi</th>
+                                <th id="Friday">Vineri</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th id="12">12:00</th>
+                                <td id="d1h12"></td>
+                                <td class="subject" id="d2h12">Matematică 📐</td>
+                                <td class="subject" id="d3h12">
+                                    Engleză <img src="img/en.png" alt="EN" class="text-img" />
+                                </td>
+                                <td id="d4h12"></td>
+                                <td class="subject" id="d5h12">Matematică 📐</td>
+                            </tr>
+                            <tr>
+                                <th id="13">13:00</th>
+                                <td class="subject" id="d1h13">
+                                    Engleză <img src="img/en.png" alt="EN" class="text-img" />
+                                </td>
+                                <td class="subject" id="d2h13">Sport ⚽</td>
+                                <td class="subject" id="d3h13">Religie ☦️</td>
+                                <td class="subject" id="d4h13">Chimie 🧪</td>
+                                <td class="subject" id="d5h13">Matematică 📐</td>
+                            </tr>
+                            <tr>
+                                <th id="14">14:00</th>
+                                <td class="subject" id="d1h14">Geografie 🌍</td>
+                                <td class="subject" id="d2h14">
+                                    Română <img src="img/ro.png" alt="RO" class="text-img" />
+                                </td>
+                                <td class="subject" id="d3h14">
+                                    Română <img src="img/ro.png" alt="RO" class="text-img" />
+                                </td>
+                                <td class="subject" id="d4h14">Civică 🪪</td>
+                                <td class="subject" id="d5h14">Latină 🦖</td>
+                            </tr>
+                            <tr>
+                                <th id="15">15:00</th>
+                                <td class="subject" id="d1h15">Matematică 📐</td>
+                                <td class="subject" id="d2h15">Muzică 🎹</td>
+                                <td class="subject" id="d3h15">Opț Matematică 📏</td>
+                                <td class="subject" id="d4h15">Biologie ⚕️</td>
+                                <td class="subject" id="d5h15">Chimie 🧪</td>
+                            </tr>
+                            <tr>
+                                <th id="16">16:00</th>
+                                <td class="subject" id="d1h16">
+                                    Română <img src="img/ro.png" alt="RO" class="text-img" />
+                                </td>
+                                <td class="subject" id="d2h16">Fizică ☄️</td>
+                                <td class="subject" id="d3h16">Dirigenție 📰</td>
+                                <td class="subject" id="d4h16">Informatică 💻</td>
+                                <td class="subject" id="d5h16">
+                                    Română <img src="img/ro.png" alt="RO" class="text-img" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th id="17">17:00</th>
+                                <td class="subject" id="d1h17">
+                                    Franceză <img src="img/fr.png" alt="FR" class="text-img" />
+                                </td>
+                                <td class="subject" id="d2h17">Tehnologică 🧰</td>
+                                <td class="subject" id="d3h17">
+                                    Franceză <img src="img/fr.png" alt="FR" class="text-img" />
+                                </td>
+                                <td class="subject" id="d4h17">Fizică ☄️</td>
+                                <td class="subject" id="d5h17">Sport ⚽</td>
+                            </tr>
+                            <tr>
+                                <th id="18">18:00</th>
+                                <td class="subject" id="d1h18">Arte Plastice 🎨</td>
+                                <td id="d2h18"></td>
+                                <td class="subject" id="d3h18">Biologie ⚕️</td>
+                                <td class="subject" id="d4h18">Istorie 📜</td>
+                                <td id="d5h18"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-panel">
+                    <div class="weather-container" id="weather">
+                        <div class="weather-emoji" id="weather-emoji">🌤️</div>
+                        <div class="weather-temp" id="weather-temp">--°C</div>
+                        <div class="weather-desc" id="weather-desc">Loading...</div>
+                        <div class="weather-location" id="weather-location">📍 Voluntari, RO</div>
+                        <br />
+
+                        <div class="weather-details">
+                            <p id="feels-like">Feels like: --°C</p>
+                            <p id="humidity">Humidity: --%</p>
+                            <p id="wind-speed">Wind: -- m/s</p>
+                        </div>
+
+                        <div class="weather-sun">
+                            <p>🌅 Sunrise: <span id="sunrise">--:--</span></p>
+                            <p>🌇 Sunset: <span id="sunset">--:--</span></p>
+                        </div>
+                        <div class="time-display" id="hourOfTheDay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="todo-container">
+            <div class="todo-card">
+                <h2>To-Do List</h2>
+                <ul class="todo-list">
+                    <!-- Tasks will be dynamically added here -->
+                </ul>
+                <div class="add-task">
+                    <input type="text" placeholder="Add a new task..." />
+                    <button>Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="boss-container">
+            <div class="container">
+                <h2>Biologie</h2>
+                <a
+                    href="https://manuale.edu.ro/manuale/Clasa%20a%20VII-a/Biologie/Q09SSU5UIExPR0lTVElD/"
+                    target="_blank">
+                    <img src="img/manual-bio.png" alt="Manual Biologie"
+                /></a>
+            </div>
+
+            <div class="container">
+                <h2>Chimie</h2>
+                <a
+                    href="https://manuale.edu.ro/manuale/Clasa%20a%20VII-a/Chimie/QVJUIEtMRVRU/#book/00"
+                    target="_blank"
+                    ><img src="img/manual-chimie.jpg" alt="Manual Chimie"
+                /></a>
+            </div>
+
+            <div class="container">
+                <h2>Civică</h2>
+                <a
+                    href="https://manuale.edu.ro/manuale/Clasa%20a%20VII-a/Educatie%20sociala/RURJVFVSQSBTSUdNQQ/#/page/c1"
+                    target="_blank"
+                    ><img src="img/manual-civica.png" alt="Manual Civică"
+                /></a>
+            </div>
+
+            <div class="container">
+                <h2>Engleză</h2>
+                <a
+                    href="https://catalog.manualedigitaleart.ro/art-engleza-lm1-7-2024/v1/index.html#book/00"
+                    target="_blank"
+                    ><img src="img/manual-engleza.jpg" alt="Manual Engleză"
+                /></a>
+            </div>
+
+            <div class="container">
+                <h2>Fizică</h2>
+                <a
+                    href="https://manuale.edu.ro/manuale/Clasa%20a%20VII-a/Fizica/QVJUIEtMRVRU/#book/00"
+                    target="_blank"
+                    ><img src="img/manual-fizica.jpg" alt="Manual Fizică"
+                /></a>
+            </div>
+
+            <div class="container">
+                <h2>Franceză</h2>
+                <a href="https://m.bookl.et/content/fra-vii/index.html#p=-1" target="_blank"
+                    ><img src="img/manual-franceza.png" alt="Manual Franceză"
+                /></a>
+            </div>
+
+            <div class="container">
+                <h2>Geografie</h2>
+                <a
+                    href="https://manuale.edu.ro/manuale/Clasa%20a%20VII-a/Geografie/Q0QgUHJlc3M/index.html"
+                    target="_blank"
+                    ><img src="img/manual-geo.jpg" alt="Manual Geografie"
+                /></a>
+            </div>
+
+            <div class="container">
+                <h2>Informatică</h2>
+                <a
+                    href="https://manuale.edu.ro/manuale/Clasa%20a%20VII-a/Informatica%20si%20TIC/R1JVUCBFRElUT1JJQUwg/"
+                    target="_blank"
+                    ><img src="img/manual-info.png" alt="Manual Informatica și TIC"
+                /></a>
+            </div>
+
+            <div class="container">
+                <h2>Istorie</h2>
+                <a
+                    href="https://manuale.edu.ro/manuale/Clasa%20a%20VII-a/Istorie/QWthZGVtb3MgQXJ0/"
+                    target="_blank"
+                    ><img src="img/manual-istorie.jpg" alt="Manual Istorie"
+                /></a>
+            </div>
+
+            <div class="container">
+                <h2>Latină</h2>
+                <a
+                    href="https://manuale.edu.ro/manuale/Clasa%20a%20VII-a/Elemente%20de%20limba%20latina%20si%20de%20cultura%20romanica%20/QVJUIEtMRVRU/#book/00"
+                    target="_blank">
+                    <img src="img/manual-latina.jpg" alt="Manual Latină"
+                /></a>
+            </div>
+
+            <div class="container">
+                <h2>Matematică</h2>
+                <a
+                    href="https://manuale.edu.ro/manuale/Clasa%20a%20VII-a/Matematica/Q09SSU5UIExPR0lTVElD/"
+                    target="_blank"
+                    ><img src="img/manual-matematica.png" alt="Manual Matematică"
+                /></a>
+            </div>
+
+            <div class="container">
+                <h2>Muzică</h2>
+                <a
+                    href="https://manuale.edu.ro/manuale/Clasa%20a%20VII-a/Educatie%20muzicala/QVJUIEtMRVRU/"
+                    target="_blank"
+                    ><img src="img/muzica.jpeg" alt="Muzica"
+                /></a>
+            </div>
+
+            <div class="container">
+                <h2>Religie</h2>
+                <a
+                    href="https://manuale.edu.ro/manuale/Clasa%20a%20VII-a/Religie%20Cultul%20Ortodox/QWthZGVtb3MgQXJ0/"
+                    target="_blank"
+                    ><img src="img/religie.jpg" alt="Religie"
+                /></a>
+            </div>
+
+            <div class="container">
+                <h2>Română</h2>
+                <a
+                    href="https://manuale.edu.ro/manuale/Clasa%20a%20VII-a/Limba%20si%20literatura%20romana/QVJUIEtMRVRU/#book/00"
+                    target="_blank"
+                    ><img src="img/romana.jpg" alt="Română"
+                /></a>
+                <a
+                    style="text-align: center; display: block; font-size: 1.5em"
+                    href="https://manuale.edu.ro/manuale/Clasa%20a%20VII-a/Limba%20si%20literatura%20romana/QVJUIEtMRVRU/A1729.pdf"
+                    target="_blank"
+                    >Manual Tipărit</a
+                >
+                <br />
+            </div>
+
+            <div class="container">
+                <h2>Tehnologică</h2>
+                <a
+                    href="https://manuale.edu.ro/manuale/Clasa%20a%20VII-a/Educatie%20tehnologica%20si%20aplicatii%20practice/Q09SSU5UIExPR0lTVElD/"
+                    target="_blank"
+                    ><img src="img/tehno.png" alt="Tehnologică"
+                /></a>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <h2>Orar 7E - Școala Gimnazială nr. 27</h2>
+                <h2>2024-2025</h2>
+                <h3>Creat de Mocanu Andrei Cristian si Petrescu Matei Razvan (din clasa 7D)</h3>
+                <p>
+                    Acest site a fost creat pentru a ajuta elevii clasei 7E să își organizeze mai
+                    bine timpul și să aibă acces rapid la informațiile necesare, de asemenea într-un
+                    mod mai interactiv și plăcut ochiului. Acest site este un proiect personal și nu
+                    are legătură oficială cu Școala Gimnazială nr. 27. Orarul este actualizat
+                    constant pentru a reflecta eventualele modificări din programa școlară. Toate
+                    informațiile prezentate sunt corecte la data publicării și pot suferi
+                    modificări. Acest site este optimizat pentru a funcționa pe toate dispozitivele,
+                    inclusiv telefoane mobile și tablete (până rezolvăm problema cu To Do List,
+                    puteți roti telefonul mobil pe orizontală). Dacă dorești să ne susții, poți
+                    distribui acest site colegilor tăi. Dacă ai sugestii sau întrebări, nu ezita să
+                    ne contactezi prin intermediul formularului de contact. Dacă întâmpini probleme
+                    în utilizarea site-ului, te rugăm să ne contactezi prin intermediul formularului
+                    de contact. De asemenea, ne poți ajuta să îmbunătățim site-ul prin feedback-ul
+                    tău. Mulțumim pentru vizită și sperăm să îți fie de ajutor acest site!
+                </p>
+                <h3><a href="https://27.surge.sh/7e" target="_blank">Website Orar Original</a></h3>
+            </div>
+
+            <div class="socials">
+                <div id="mocanu-socials">
+                    <h3>Mocanu Andrei Cristian</h3>
+                    <a href="https://www.instagram.com/cristi_mocanu_ro/" target="_blank" class="ig"
+                        ><i class="fa-brands fa-instagram"></i
+                    ></a>
+                    <a
+                        href="https://discordapp.com/users/796067598835515422"
+                        target="_blank"
+                        class="dc"
+                        ><i class="fa-brands fa-discord"></i
+                    ></a>
+                    <a href="https://github.com/mocanuAndreiCristian" target="_blank" class="gh"
+                        ><i class="fa-brands fa-github"></i
+                    ></a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="index.js"></script>
+    </body>
+</html>
